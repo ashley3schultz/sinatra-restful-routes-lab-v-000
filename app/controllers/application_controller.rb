@@ -9,7 +9,8 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/recipes' do
-    redirect '/'
+    @recipes = Recipe.all
+    erb :index
   end
 
   get 'recipes/:id' do
