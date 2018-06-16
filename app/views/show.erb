@@ -8,10 +8,8 @@
     <h1><%= @recipe.name %></h1>
     <h2><%= @recipe.cook_time %> minutes</h2>
     <p><%=  @recipe.ingredients %></p>
-    <form action="/recipes/<%=@recipe.id%>/delete" method="post">
-      <input id="hidden" name="hidden" type="_method" value="delete">
-      <input type="submit" value="Delete">
-    </form>
+    <a href="/recipes/<%=@recipe.id%>/delete">DELETE</a>
+
 
   </body>
 </html>
