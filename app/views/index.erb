@@ -7,7 +7,6 @@
   <body>
     <% Recipes.all.each do |r| %>
     <h1><%= r.name %></h1>
-    <h2><%= r.cook_time %></h2>
-    <p><%= r.ingredients %></p>
+    <a href="/recipes/<%=r.id%>"></a>
   </body>
 </html>
