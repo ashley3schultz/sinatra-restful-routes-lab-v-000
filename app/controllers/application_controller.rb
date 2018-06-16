@@ -32,14 +32,14 @@ class ApplicationController < Sinatra::Base
     erb :edit
   end
 
+  use Rack::MethodOverride
+
   patch '/recipes/:id' do
     @recipe = Recipe.find(params[:id])
     @recipe.update(name: params[:name], ingredients: params[:ingredients], cook_time: params[:cook_time])
     @recipe.save
     redirect "/recipes/#{@recipe.id}"
   end
-
-  use Rack::MethodOverride
 
   delete '/recipes/:id/delete' do #delete action
     @recipe = Recipe.find_by_id(params[:id])
