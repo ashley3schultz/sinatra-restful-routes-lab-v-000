@@ -6,6 +6,8 @@
   </head>
   <body>
     <h1>Recipes</h1>
-
+    <% Recipes.all.each do |r| %>
+    <h1><%= r.name %></h1>
+    <a href="/recipes/<%=r.id%>"></a>
   </body>
 </html>
