@@ -1,0 +1,16 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body>
+    <% Recipes.all.each do |r| %>
+    <h1><%= r.name %></h1>
+    <h2><%= r.cook_time %></h2>
+    <p><%= r.ingredients %></p>
+    
+  </body>
+</html>
