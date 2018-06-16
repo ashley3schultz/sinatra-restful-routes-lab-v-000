@@ -6,7 +6,7 @@
   </head>
   <body>
     <form action="/recipes/<%=@recipe.id%>" method="post">
-      <input type="_method" name="hidden" id="hidden" value="patch">
+      <input id="hidden" type="hidden" name="_method" value="patch">
 
       <p><label>Dish Name:</label>
       <input type="text" name="name" value="<%=@recipe.name%>"></p>
