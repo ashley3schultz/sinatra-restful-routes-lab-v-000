@@ -5,8 +5,21 @@
     <title>title</title>
   </head>
   <body>
-    <form action="/recipes/:id/edit" method="post">
+    <form action="/recipes/<%=@recipe.id%>/edit" method="post">
+      <input type="_method" name="hidden" id="hidden" value="patch">
+
+      <p><label>Dish Name:</label>
+      <input type="text" name="name" value="<%=@recipe.name%>"></p>
+
+      <p><label>Cook Time:</label>
+      <input type="text" name="cook_time" value="<%=@recipe.cook_time%>"></p>
+
+      <p><label>Ingredients:</label>
+      <input type="text" name="ingredients" value="<%=@recipe.ingredients%>"></p>
+
+      <p><input type="submit" value="Update"></p>
       
+
     </form>
   </body>
 </html>
